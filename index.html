@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alima</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        font-family: sans-serif;
+    }
+    .navbar {
+        display: flex;
+        justify-content: space-between; 
+        background-color: #fff;
+        padding: 10px 0px;
+    }
+    
+    .logo img {
+        margin-left: 25rem;
+        height: 50px;
+    }
+    .navigations {
+        flex: 2;
+        display: flex;
+        justify-content: center;
+    }
+    .navbar a {
+        font-weight: bold;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+    .navbar a:hover {
+        background-color: #4CAF50;
+        color: #fff;
+    }
+    .navbar a.active {
+        background-color: #4CAF50;
+        color: white;
+    }
+</style>
+<body>
+<div class="navbar">
+    <div class="logo">
+        <img src="assets/Group 58.png" alt="logo">
+    </div>
+<div class="navigations">
+    <a href="#" class="active">Home</a>
+    <a href="#">Benefits</a>
+    <a href="#">How it works</a>
+    <a href="#">Testimonials</a>
+</div>
+</div>
+
+<script>
+const links = document.querySelectorAll('.navigations a');
+links.forEach(link => {
+    link.addEventListener('click', function() {
+        links.forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+    });
+});
+</script>
+</html>
